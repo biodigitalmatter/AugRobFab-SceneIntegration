@@ -3,11 +3,6 @@ import os
 import json
 from scipy.spatial.transform import Rotation
 
-# Set the working directory to the directory of the script
-abspath = os.path.abspath(__file__)
-dname = os.path.dirname(abspath)
-os.chdir(dname)
-
 
 def import_intrinsic_calib(dir, fn="intrinsic.json"):
     """
@@ -101,3 +96,9 @@ def readJSON(file_path):
         data = json.load(f)
     print("Done")
     return data
+
+if __name__ == "__main__":
+    # Set the working directory to the directory of the script
+    abspath = os.path.abspath(__file__)
+    dname = os.path.dirname(abspath)
+    os.chdir(dname)

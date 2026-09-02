@@ -4,7 +4,7 @@ import ast
 import os
 import numpy as np
 from scipy.spatial.transform import Rotation
-from src.util import composeH, decomposeH, readJSON, writeJSON
+from AugRobFab_SceneIntegration.util import composeH, decomposeH, readJSON, writeJSON
 
 
 class TROBParser:

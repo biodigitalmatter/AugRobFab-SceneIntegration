@@ -5,7 +5,7 @@ import numpy as np
 import open3d as o3d
 import open3d.core as o3c
 
-from src.util import import_intrinsic_calib
+from AugRobFab_SceneIntegration.util import import_intrinsic_calib
 
 class TSDF_Integration():
 	"""

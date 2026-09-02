@@ -92,5 +92,5 @@ PIP
             cd C:\Users\AugRobFab\Documents\GitHub\AugRobFab-SceneIntegration
     
     1- Install additional pip packages required(Alternatively, you can install them individually using pip install):
-        pip install -r requirements.txt
+        pip install '.[kinect]'
 -------------------------------------------------------------------------

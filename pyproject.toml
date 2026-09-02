@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "AugRobFab-SceneIntegration"
+version = "0.10.1"
+authors = [{name = "Özgüç Bertuğ Çapunaman"}]
+description = "Integration of TSDF volumes from extrinsic poses, depth, and (optionally) color images."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+  "numpy >= 1.26.2",
+  "open3d ~=0.17",
+  "scipy >= 1.11.4",
+  "opencv-python >= 4.8.1.78",
+]
+
+[project.optional-dependencies]
+kinect = ["pyk4a >= 1.5.0"]
+
+[project.urls]
+Repository = "https://github.com/AugmentedRoboticFabrication/AugRobFab-SceneIntegration"

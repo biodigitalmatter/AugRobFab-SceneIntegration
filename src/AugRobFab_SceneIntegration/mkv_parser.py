@@ -1,7 +1,7 @@
 import os
 import cv2
 import pyk4a
-from src.util import writeJSON
+from AugRobFab_SceneIntegration.util import writeJSON
 
 
 class AzureKinectMKVParser(object):

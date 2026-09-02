@@ -52,8 +52,10 @@ conda create --name augrobfab python=3.9
 Navigate to the project repository and install the necessary Python packages:
 ```
 cd <Path-To-Scene-Integration-Repo>
-pip install -r requirements.txt
+pip install '.[kinect]'
 ```
+
+Running `pip install .` will skip the Azure Kinect library [`pyk4a`](https://pypi.org/project/pyk4a/).
 
 ## Citation
 
