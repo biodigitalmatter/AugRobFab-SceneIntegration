@@ -1,9 +1,11 @@
-import glob
-import re
 import ast
+import glob
 import os
+import re
+
 import numpy as np
 from scipy.spatial.transform import Rotation
+
 from AugRobFab_SceneIntegration.util import composeH, decomposeH, readJSON, writeJSON
 
 

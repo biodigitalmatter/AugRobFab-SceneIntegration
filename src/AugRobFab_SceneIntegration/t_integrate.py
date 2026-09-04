@@ -1,11 +1,12 @@
-import os
 import glob
+import os
 
 import numpy as np
 import open3d as o3d
 import open3d.core as o3c
 
 from AugRobFab_SceneIntegration.util import import_intrinsic_calib
+
 
 class TSDF_Integration():
 	"""

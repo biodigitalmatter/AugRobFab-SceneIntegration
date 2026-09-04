@@ -1,6 +1,7 @@
-import numpy as np
-import os
 import json
+import os
+
+import numpy as np
 from scipy.spatial.transform import Rotation
 
 

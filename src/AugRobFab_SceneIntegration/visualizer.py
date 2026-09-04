@@ -1,9 +1,11 @@
-import numpy as np
+from typing import List, Optional, Tuple
+
 import matplotlib as mpl
 import matplotlib.pyplot as plt
+import numpy as np
 from matplotlib.patches import Patch
 from mpl_toolkits.mplot3d.art3d import Poly3DCollection
-from typing import Optional, Tuple, List
+
 
 class CameraPoseVisualizer:
     """
