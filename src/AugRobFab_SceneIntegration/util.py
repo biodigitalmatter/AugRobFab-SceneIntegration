@@ -79,8 +79,8 @@ def writeJSON(data, file_path):
     :param data: Data to be written to the file.
     :param file_path: Path of the file to write data to.
     """
-    print(f"Writing JSON file {file_path} ... ", end='')
-    with open(file_path, 'w') as f:
+    print(f"Writing JSON file {file_path} ... ", end="")
+    with open(file_path, "w") as f:
         json.dump(data, f)
     print("Done")
 
@@ -92,11 +92,12 @@ def readJSON(file_path):
     :param file_path: Path of the file to read data from.
     :return: Data read from the file.
     """
-    print(f"Reading JSON file {file_path} ... ", end='')
-    with open(file_path, 'r') as f:
+    print(f"Reading JSON file {file_path} ... ", end="")
+    with open(file_path, "r") as f:
         data = json.load(f)
     print("Done")
     return data
+
 
 if __name__ == "__main__":
     # Set the working directory to the directory of the script
