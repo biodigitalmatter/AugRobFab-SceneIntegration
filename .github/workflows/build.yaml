@@ -38,3 +38,24 @@ jobs:
           python3 -c "import AugRobFab_SceneIntegration.t_integrate"
           python3 -c "import AugRobFab_SceneIntegration.util"
           python3 -c "import AugRobFab_SceneIntegration.visualizer"
+
+  lint:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        python-version: ["3.12"]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - run: |
+          python -m pip install ruff
+
+      - run: ruff check
+
+      - run: ruff format --check

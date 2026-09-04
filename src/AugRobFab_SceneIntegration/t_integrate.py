@@ -312,7 +312,7 @@ class TSDF_Integration:
 
         if file_name is not None:
             path = os.path.join(self.dir, file_name)
-            o3d.io.write_triangle_mesh(file_name, mesh)
+            o3d.io.write_triangle_mesh(path, mesh)
         return mesh
 
     def extract_pointcloud(self, file_name="pcd.ply"):
@@ -331,7 +331,7 @@ class TSDF_Integration:
 
         if file_name is not None:
             path = os.path.join(self.dir, file_name)
-            o3d.io.write_point_cloud(file_name, pcd)
+            o3d.io.write_point_cloud(path, pcd)
         return pcd
 
     def visualize(self):
@@ -368,7 +368,7 @@ class TSDF_Integration:
         for extrinsic in self.extrinsics:
             pose = np.linalg.inv(extrinsic.numpy())
 
-            l = 0.01
+            l = 0.01  # noqa: E741
             points.append((pose @ np.array([0, 0, 0, 1]).T)[:3])
             points.append((pose @ np.array([2 * l, l, 2 * l, 1]).T)[:3])
             points.append((pose @ np.array([2 * l, -l, 2 * l, 1]).T)[:3])
