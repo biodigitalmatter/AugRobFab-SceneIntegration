@@ -1,0 +1,40 @@
+on:
+  push:
+  pull_request:
+
+jobs:
+  import-test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        python-version: ["3.12"]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - run: |
+          python -m pip install --upgrade pip setuptools wheel build
+
+      - name: CI deps
+        run: |
+          python -m pip install opencv-python-headless open3d
+
+      - name: build
+        run: |
+          python -m build
+
+      - name: install wheel
+        run: |
+          python -m pip install dist/*.whl
+
+      - name: import
+        run: |
+          python3 -c "import AugRobFab_SceneIntegration.abb_parser"
+          python3 -c "import AugRobFab_SceneIntegration.t_integrate"
+          python3 -c "import AugRobFab_SceneIntegration.util"
+          python3 -c "import AugRobFab_SceneIntegration.visualizer"
